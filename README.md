@@ -46,7 +46,7 @@ JAR or WAR Code deployment:
 Suitable scenarios:
 - Dev, Test, POC
 
-### AppGW App Services App (code or container)
+### AppGW and Private Enpoint App Services App (code or container)
 
 ```mermaid
 graph LR;
@@ -55,13 +55,13 @@ graph LR;
   subgraph "Linux App Service Plan"
     a2[Web App]
   end  
-  a2--Service Tags-->D(Azure<br/>PostgreSQL);
+  a2-->D(Private<br/>Endpoint);
+  D-->G(Azure<br/>PostgreSQL);
   classDef unsafe fill:red,color:black;
   class A,B,C unsafe;
-  classDef semisafe fill:darkorange,color:black;
-  class D,a2 semisafe;
+  classDef semisafe fill:darkorange,color:black;  
   classDef safe fill:darkgreen,color:black;
-  class F safe;
+  class D,F,a2,G safe;
 ```
 
 Suitable scenarios:
