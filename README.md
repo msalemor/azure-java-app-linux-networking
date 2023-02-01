@@ -67,6 +67,15 @@ graph LR;
   class D,F,a2,G safe;
 ```
 
+Security at this level:
+- Public IP can be protected by DDOS
+- TLS by default
+- AppGW deployed to subnet and can do SSL offloading
+- Traffic flows from internet to the application via Application Gateway
+- The application is protected against common attacks via the AppGw WAF
+- Traffic flows from App to PostgreSQL via VNET integration, the backend subnet and the PostgreSQL Private Endpoint
+- All traffic stays within the Azure backbone
+
 JAR or WAR Code deployment:
 - From VS Code
 - From Azure CLI
