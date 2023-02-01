@@ -18,7 +18,7 @@ graph LR;
 JAR or WAR Code deployment:
 - From VS Code or VS Studio
 - From Azure CLI
-- Recommended: Git actions or ADO
+- Recommended: Automated CI/CD pipeline (i.e. Git actions/ADO)
 
 Suitable scenarios:
 - Dev, Test, POC
@@ -41,7 +41,7 @@ graph LR;
 JAR or WAR Code deployment:
 - From VS Code
 - From Azure CLI
-- Recommended: Git actions or ADO
+- Recommended: Automated CI/CD pipeline (i.e. Git actions/ADO)
 
 Suitable scenarios:
 - Dev, Test, POC
@@ -63,6 +63,11 @@ graph LR;
   classDef safe fill:darkgreen,color:black;
   class D,F,a2,G safe;
 ```
+
+JAR or WAR Code deployment:
+- From VS Code
+- From Azure CLI
+- Recommended: Automated CI/CD pipeline (i.e. Git actions/ADO)
 
 Suitable scenarios:
 - Dev, Test, POC
