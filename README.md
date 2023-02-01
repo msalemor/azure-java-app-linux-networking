@@ -52,7 +52,8 @@ Suitable scenarios:
 
 ```mermaid
 graph LR;
-  A((Internet))-->F[AppGw/WAF]
+  A((Internet))-->H((Public<br/>IP));
+  H-->F[AppGw<br/>WAF]
   F--Subnet<br/>Restriction-->a2;
   subgraph "Linux App Service Plan"
     a2(Web App<br/>or Web App<br/>For Containers)
