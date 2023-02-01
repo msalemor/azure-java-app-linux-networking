@@ -1,5 +1,7 @@
 # Azure Java App Linux App Networking
 
+## Some scenarios in order of improved security
+
 ### App Services Java App with PostgreSQL (Deploy code)
 
 ```mermaid
@@ -29,7 +31,7 @@ Suitable scenarios:
 graph LR;
   A((Internet))--Access Restrictions<br>ie IP Filter-->a2;
   subgraph "Linux App Service Plan"
-    a2[Web App]
+    a2[Web App<br/>For Containers]
   end  
   a2--Service Tags-->D(Azure<br/>PostgreSQL);
   classDef unsafe fill:red,color:black;
@@ -53,7 +55,7 @@ graph LR;
   A((Internet))-->F[AppGw/WAF]
   F--Subnet<br/>Restriction-->a2;
   subgraph "Linux App Service Plan"
-    a2[Web App]
+    a2(Web App<br/>or Web App<br/>For Containers)
   end  
   a2-->D(Private<br/>Endpoint);
   D-->G(Azure<br/>PostgreSQL);
