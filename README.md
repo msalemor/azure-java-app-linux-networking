@@ -17,7 +17,7 @@ graph LR;
   class D,a2 semisafe;
 ```
 
-JAR or WAR Code deployment:
+Code/container deployment:
 - From VS Code or VS Studio
 - From Azure CLI
 - Recommended: Automated CI/CD pipeline (i.e. Git actions/ADO)
