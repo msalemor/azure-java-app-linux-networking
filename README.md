@@ -46,7 +46,7 @@ JAR or WAR Code deployment:
 - Recommended: Automated CI/CD pipeline (i.e. Git actions/ADO)
 
 Suitable scenarios:
-- Dev, Test, POC
+- QA and production security sensitive workloads
 
 ### AppGW and Private Enpoint App Services App (code or container)
 
