@@ -53,12 +53,18 @@ Suitable scenarios:
 ```mermaid
 graph LR;
   A((Internet))-->H((Public<br/>IP));
-  H-->F[AppGw<br/>WAF]
+  H-->F;
+  subgraph "AppGw<br/>Subnet"
+    F[AppGw<br/>WAF]
+  end;
   F--Subnet<br/>Restriction-->a2;
   subgraph "Linux App Service Plan"
     a2(Web App<br/>or Web App<br/>For Containers)
   end  
-  a2-->D(Private<br/>Endpoint);
+  a2-->D;
+  subgraph "Private Endpoint<br/>Subnet"
+    D(Private<br/>Endpoint);
+  end;
   D-->G(Azure<br/>PostgreSQL);
   classDef unsafe fill:red,color:black;
   class A,B,C unsafe;
