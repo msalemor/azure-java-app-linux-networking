@@ -1,4 +1,4 @@
-# Azure Java App Linux App Networking
+# Azure Java App Linux App Networking and Security
 
 ## Some scenarios in order of improved security
 
